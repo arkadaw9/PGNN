@@ -12,9 +12,6 @@ This paper considers the following two example lakes to demonstrate the effectiv
 
 Please note that the paper provides an semi-supervised approach framework, where the mean squared error on the temperature predictions are computed using a labeled dataset whereas the physics based loss can be computed from an unlabeled dataset. The labelled and unlabeled datasets can be found in the 'datasets\\' directory under the name '[lake].mat' and '[lake]\_sampled.mat' respectively. [lake] should be replaced by 'mendota' for Lake Mendota and 'mille_lacs' for Lake Mille Lacs.
 
-## Using the code :
-
-The repository contains code and datasets needed for training and testing the PGNN framework described in the paper.
 
 ### Dependencies :
 
@@ -22,4 +19,17 @@ The repository contains code and datasets needed for training and testing the PG
 * Keras 2.2.5
 * Tensorflow 1.14.0
 
-To save the models and the results after training please create a '\results\\' directory. Then run the script '\models\PGNN.py'. The hyperparameters and the datasets for the PGNN framework can be changed from the script.
+## Using the code :
+
+The repository contains code and datasets needed for training and testing the PGNN framework described in the paper.
+
+1. To save the models and the results after training please create a '\results\\' directory. 
+```
+mkdir results
+```
+2. Then run the script '\models\PGNN.py'. 
+```
+cd models
+python PGNN.py
+```
+The hyperparameters and the datasets for the PGNN framework can be changed from the script.
