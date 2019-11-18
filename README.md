@@ -16,4 +16,10 @@ Please note that the paper provides an semi-supervised approach framework, where
 
 The repository contains code and datasets needed for training and testing the PGNN framework described in the paper.
 
+### Dependencies :
+
+* Python 3.7.3
+* Keras 2.2.5
+* Tensorflow 1.14.0
+
 To save the models and the results after training please create a '\results\\' directory. Then run the script '\models\PGNN.py'. The hyperparameters and the datasets for the PGNN framework can be changed from the script.
