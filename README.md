@@ -8,7 +8,7 @@ This paper introduces a novel framework for combining scientific knowledge of ph
 ## Datasets :
 This paper considers the following two example lakes to demonstrate the effectiveness of PGNN framework.
 1. Lake Mille Lacs in Minnesota, USA
-2. Lake Mendota in Wisconsin
+2. Lake Mendota in Wisconsin, USA
 
 Please note that the paper provides an semi-supervised approach framework, where the mean squared error on the temperature predictions are computed using a labeled dataset whereas the physics based loss can be computed from an unlabeled dataset. The labelled and unlabeled datasets can be found in the 'datasets\\' directory under the name '[lake].mat' and '[lake]\_sampled.mat' respectively. [lake] should be replaced by 'mendota' for Lake Mendota and 'mille_lacs' for Lake Mille Lacs.
 
