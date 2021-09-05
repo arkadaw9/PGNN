@@ -33,3 +33,33 @@ cd models
 python PGNN.py
 ```
 The hyperparameters and the datasets for the PGNN framework can be changed from the script.
+
+Note: An alternative version of the PGNN script with parser options can be used too. 
+Example for Lake Mille Lacs with Adam Optimizer (other hyperparameters can be tuned accordingly):
+```
+cd hybrid
+python hpd.py --dataset mille_lacs --optimizer_val 2 --data_dir ../datasets/ --use_YPhy 1 --lambda 100.0
+```
+
+
+### Using the code for Hybrid Modeling:
+
+The **HPD model** is same as the PGNN0, i.e., the physics-loss is not used $\lambda_{PHY}=0$. To run the HPD model use the following script '\hybrid\hpd.py'
+Example for Lake Mille Lacs with Adam Optimizer:
+```
+cd hybrid
+python hpd.py --dataset mille_lacs --optimizer_val 2 --data_dir ../datasets/ --use_YPhy 1 --lambda 0.0
+```
+
+To use the **Residual (Res) model**, without the use of the addition YPhy input use the script '\hybrid\res_nn.py'
+Example for Lake Mille Lacs with Adam Optimizer:
+```
+cd hybrid
+python res_nn.py --dataset mille_lacs --optimizer_val 2 --data_dir ../datasets/ --use_YPhy 0 --lambda 0.0
+```
+
+To run the **Hybrid-Residual (HPD-Res) model**, use the following:
+```
+cd hybrid
+python res_nn.py --dataset mille_lacs --optimizer_val 2 --data_dir ../datasets/ --use_YPhy 1 --lambda 0.0
+```
